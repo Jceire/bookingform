@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="reservation.php" method="post">
+      <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="visitor_name"
+          placeholder="John Doe"
+          pattern="[A-Z\sa-z]{3,20}"
+          required
+        />
+      </div>
+      <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="visitor_email"
+          placeholder="john.doe@email.com"
+          required
+        />
+      </div>
+      <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="visitor_phone"
+          placeholder="498-348-3872"
+          pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})"
+          required
+        />
+      </div>
+      <div class="elem-group">
+        <label for="phone">Your Car Registration</label>
+        <input
+          type="tel"
+          id="phone"
+          name="visitor_phone"
+          placeholder="498-348-3872"
+          pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})"
+          required
+        />
+      </div>
+      <hr />
+      <div class="elem-group inlined">
+        <label for="checkin-date">Check-in Date</label>
+        <input type="date" id="checkin-date" name="checkin" required />
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkout-date">Check-out Date</label>
+        <input type="date" id="checkout-date" name="checkout" required />
+      </div>
+      <hr />
+      <div class="elem-group">
+        <label for="message">What is the issue?</label>
+        <textarea
+          id="message"
+          name="visitor_message"
+          placeholder="Tell us more about the problem."
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Book Your Car In Now</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
